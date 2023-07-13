@@ -5,7 +5,7 @@
 @section('content')
     <header class="common-header">
         <div class="header-wrapper">
-            <h1 class="title-large">With apples drink teriyaki. </h1>
+            <h1 class="title-large">{{$category->name}} products</h1>
         </div>
         <div class="pattern__header"></div>
     </header>
@@ -36,6 +36,11 @@
             <article class="product">
                 <a class="clickable-area" href="javascript:;">
                     <header class="product__header">
+                        
+                        <div class="card__cover">
+                            <img src="{{asset($product->image)}}" style="width: 150px;">
+                        </div>
+
                         <h3 class="title-medium">{{$product->name}}</h3>
                         <!-- Tooggle item -->
                         <span class="collapse__open"></span>
