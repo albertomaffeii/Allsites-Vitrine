@@ -22,7 +22,7 @@ use App\Http\Controllers\Site\ContactController;
 Route::get('/', [HomeController::class, '__invoke'])->name('site.home');
 
 Route::get('/products', [CategoryController::class, 'index'])->name('site.products');
-Route::get('/products/{slug}', [CategoryController::class, 'show'])->name('site.products.category');
+Route::get('/products/{category:slug}', [CategoryController::class, 'show'])->name('site.products.category');
 
 Route::get('/blog', [BlogController::class, '__invoke'])->name('site.blog');
 
